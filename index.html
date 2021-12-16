@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Botstrapt</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/mystyle.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    function changeBackground(){
+      var body = document.getElementById("body");
+      body.classList.toggle("changeBackground");
+    }
+    
+  </script>
+
+</head>
+<body id="body">
+<div class="jumbotron text-center" style="background-color: lightblue; margin-bottom: 0px;">
+	<h1>MY Bootstrapt</h1>
+	<p>This website implements bootstrap</p>
+</div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#gallery">Gallery</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#aboutUs">About us</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#contacts">Contacts</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane  active" id="home" style="margin: 30px">
+  	<h1>Home section</h1>
+    <p>The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk </p>
+    <p>The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk </p>
+        <p>The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk </p>
+    <p>The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk The quick brown jumps sakfjkdafjsdef sefjlaefkle saefokafleakfaf aefljafje dsafkjafk </p>
+    
+
+  </div>
+
+
+  <div class="tab-pane  fade" id="gallery" style="margin: 30px">
+  	<h1>Gallert Section</h1>
+      <button onclick="changeBackground()" class="btn btn-warning"> Click to cahanga background</button>
+
+<div id="result"></div>
+
+  </div>
+
+
+  <div class="tab-pane  fade" id="aboutUs" style="margin: 30px">
+  	<h1>About section</h1>
+  </div>
+
+
+   <div class="tab-pane  fade" id="contacts" style="margin: 30px">
+   	<h1>Cotacts Section</h1>
+      <!-- Button to Open the Modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Open modal
+      </button>
+
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              Modal body..
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+   </div>
+</div>
+
+<script type="text/javascript">
+  
+  var galleryItems = '[{"URL":"./img/01.jpg","Caption":"Eifel Tower"}, {"URL":"./img/02.jpg","Caption":" Great Wall of China"}, {"URL":"./img/03.jpg","Caption":"Kremlin"}, {"URL":"./img/04.jpg","Caption":"Leaning Tower of Pisa"}, {"URL":"./img/05.jpg","Caption":"Pyramid of Giza"}, {"URL":"./img/06.jpg","Caption":"Sydney Opera House"}, {"URL":"./img/07.jpg","Caption":" Statue of Liberty"}, {"URL":"./img/08.jpg","Caption":"Taj Mahal"}, {"URL":"./img/09.jpg","Caption":"Easter Island Moai"}]';
+  var Items = JSON.parse(galleryItems);
+  console.log(Items);
+  for(var i in Items){
+    var elemGallery = document.createElement("div");
+    elemGallery.classList.add("gallery");
+    var elemA = document.createElement("a");
+    elemA.target ="_blank";
+    elemA.href =Items[i].URL
+    var elemImg = document.createElement("img");
+    elemImg.src =Items[i].URL;
+    elemImg.alt =Items[i].Caption;
+    elemA.appendChild(elemImg);
+    var elemDescription = document.createElement("div");
+    elemDescription.classList.add("desc");
+    elemDescription.innerHTML ="Image" + (+i + 1) + "<br>" + Items[i].Caption;
+    elemGallery.appendChild(elemA);
+    elemGallery.appendChild(elemDescription);
+
+    var result = document.getElementById("result");
+    result.appendChild(elemGallery);
+
+
+  }
+</script>
+</body>
+</html>

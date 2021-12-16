@@ -1,0 +1,32 @@
+*{
+			box-sizing: border-box;
+			font-family: "Arial Narrow";
+			font-size: 12pt;
+		}
+      div.gallery{
+      	border:2px solid #ccc;
+      	margin: 10px;
+      	background-color:white;
+      	width:30%;
+      	float:left;
+      	box-shadow: 8px 8px 8px #888888;
+      }
+      div.gallery:hover{
+      	border:2px solid black;
+      	opacity:60%;
+      }
+      div.gallery img{
+      	width:100%;
+      	height:auto;
+
+      }
+
+      div.desc{
+      	border:2px solid #ccc;
+      	text-align:center;
+      }
+
+      .changeBackground{
+      	background-color: black;
+      	color:blue;
+      }
